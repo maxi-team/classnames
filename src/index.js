@@ -1,9 +1,13 @@
 const stringify = (mix) => {
-  if (typeof mix === 'string' || typeof mix === 'number') {
+  if (typeof mix === 'string') {
     return mix;
   }
 
   let result = '';
+  if (typeof mix === 'number') {
+    return result + mix;
+  }
+
   if (typeof mix === 'object') {
     let sub;
     let part;
