@@ -1,0 +1,50 @@
+const stringify = (mix) => {
+  if (typeof mix === 'string' || typeof mix === 'number') {
+    return mix;
+  }
+
+  let result = '';
+  if (typeof mix === 'object') {
+    let sub;
+    let part;
+    let key;
+
+    if (Array.isArray(mix)) {
+      key = mix.length;
+      while (key--) {
+        if (part = mix[key]) {
+          if (sub = stringify(part)) {
+            result += (result && ' ') + sub;
+          }
+        }
+      }
+
+      return result;
+    }
+
+    for (key in mix) {
+      if (part = mix[key]) {
+        result += (result && ' ') + sub;
+      }
+    }
+  }
+
+  return result;
+};
+
+export function classNames() {
+  let result = '';
+  let sub;
+  let part;
+
+  let i = arguments.length;
+  while (i--) {
+    if (part = arguments[i]) {
+      if (sub = stringify(part)) {
+        result += (result && ' ') + sub;
+      }
+    }
+  }
+
+  return result;
+}
