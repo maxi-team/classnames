@@ -23,8 +23,8 @@ const stringify = (mix) => {
     }
 
     for (key in mix) {
-      if (part = mix[key]) {
-        result += (result && ' ') + sub;
+      if (mix[key]) {
+        result += (result && ' ') + key;
       }
     }
   }
