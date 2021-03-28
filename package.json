@@ -26,12 +26,14 @@
     "url": "https://github.com/maxi-team/classnames.git"
   },
   "scripts": {
-    "build": "microbundle -f es,cjs --no-sourcemap"
+    "build": "microbundle -f es,cjs --no-sourcemap",
+    "test": "mocha tests/*.js"
   },
   "devDependencies": {
     "@mntm/eslint-config": "^0.2.0",
     "eslint": "^7.23.0",
     "microbundle": "^0.13.0",
+    "mocha": "^8.3.2",
     "typescript": "^4.2.3"
   }
 }
