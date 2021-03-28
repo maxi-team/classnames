@@ -3,11 +3,11 @@ const stringify = (mix) => {
     return mix;
   }
 
-  let result = '';
   if (typeof mix === 'number') {
-    return result + mix;
+    return '' + mix;
   }
 
+  let result = '';
   if (typeof mix === 'object') {
     let sub;
     let part;
